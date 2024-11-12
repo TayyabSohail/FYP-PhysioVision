@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 import { Layout, Dropdown, Avatar, Space } from "antd";
-import { UserOutlined, LogoutOutlined } from "@ant-design/icons";
+import { UserOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 
 import { Logo } from "./Logo";
@@ -17,14 +17,8 @@ export const Header = () => {
     {
       label: "Profile",
       icon: <UserOutlined className="!text-lg" />,
-      key: ROUTES.profile,
-      onClick: () => navigate(ROUTES.profile),
-    },
-    {
-      label: "Logout",
-      icon: <LogoutOutlined className="!text-lg" />,
-      key: "/logout",
-      onClick: () => logout(),
+      key: ROUTES.home,
+      onClick: () => navigate(ROUTES.home),
     },
   ];
 
