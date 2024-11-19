@@ -1,17 +1,17 @@
+import { Space, Layout as AntdLayout } from "antd";
 import { Outlet } from "react-router-dom";
-
-import { Layout as AntdLayout, Space } from "antd";
-
 import { Header } from "../components/Header";
 
-export const Layout = () => {
+interface LayoutProps {
+  children?: React.ReactNode;
+}
+
+export const Layout = ({ children }: LayoutProps) => {
   return (
-    <Space direction="vertical" className="w-full h-full min-h-screen">
+    <Space direction="vertical" className="w-full h-full">
       <AntdLayout className="w-full h-full bg-white">
-        <Header />
-        <AntdLayout.Content className="w-full h-full min-h-[93vh] flex flex-col gap-y-10">
-          <Outlet />
-        </AntdLayout.Content>
+        <Header /> {/* Fixed Header */}
+        <AntdLayout.Content>{children || <Outlet />}</AntdLayout.Content>
       </AntdLayout>
     </Space>
   );
