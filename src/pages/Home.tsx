@@ -6,19 +6,21 @@ import { useEffect, useState } from "react";
 
 export const Home = () => {
   const images = [homePageImage1, homePageImage2, homePageImage3];
+  const extendedImages = [...images, ...images]; // Duplicate the images array for infinite loop
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length); // Cycle through images
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % extendedImages.length); // Cycle through images
     }, 3000); // Change every 3 seconds
     return () => clearInterval(interval); // Cleanup on component unmount
-  }, [images.length]);
+  }, [extendedImages.length]);
 
   // Dynamic height adjustment for different images
   const getImageHeight = (index: number) => {
-    if (index === 0) return "h-[615px]"; // First image keeps default height
-    if (index === 1) return "h-[635px]"; // Second image is slightly taller
+    const adjustedIndex = index % images.length; // Adjust to original images length
+    if (adjustedIndex === 0) return "h-[615px]"; // First image keeps default height
+    if (adjustedIndex === 1) return "h-[635px]"; // Second image is slightly taller
     return "h-[640px]"; // Third image is slightly taller
   };
 
@@ -32,7 +34,7 @@ export const Home = () => {
             transform: `translateX(-${currentIndex * 100}%)`, // Slide container based on currentIndex
           }}
         >
-          {images.map((image, index) => (
+          {extendedImages.map((image, index) => (
             <div
               key={index}
               className={`w-full flex-shrink-0 bg-cover rounded-md shadow-lg ${getImageHeight(
