@@ -1,5 +1,5 @@
 import { Form, Input } from "antd";
-import { PrimaryButton } from "../components/Button"; // Your styled button component
+import { PrimaryButton } from "../components/Button";
 
 import Logo from "../assets/images/Logo.png"; // Logo path
 import whiteBackground from "../assets/images/white_background.png"; // White background for the right section
