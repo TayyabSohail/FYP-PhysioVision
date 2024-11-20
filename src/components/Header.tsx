@@ -8,7 +8,7 @@ export const Header = () => {
   const currentTime = new Date().toLocaleTimeString(); // Example: "10:30 AM"
 
   return (
-    <Layout.Header className="!sticky !top-0 !w-full h-[30vh] px-5 !py-0 flex items-center bg-black">
+    <Layout.Header className="fixed top-0 w-full z-50 h-[30vh] px-5 py-0 flex items-center bg-black">
       {/* Left Section: User Info */}
       <div className="flex items-center gap-3">
         <Avatar
@@ -23,13 +23,12 @@ export const Header = () => {
 
       {/* Center Section: Logo and Navigation */}
       <div className="flex flex-col items-center mx-80 translate-y-[2vh]">
-        {" "}
         {/* Adjusted positioning */}
         {/* Bigger Logo without hover */}
         <img
           src={Logo}
           alt="Logo"
-          className="h-[15vh] hover:opacity-100 transition-opacity duration-300" // Increased logo size
+          className="h-[15vh] hover:opacity-100 transition-opacity duration-300"
         />
         <div className="flex gap-10 mt-4">
           {["Home", "Profile", "Chatbot", "Vision", "Contact", "About"].map(
