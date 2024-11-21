@@ -8,7 +8,20 @@ import { useEffect, useState } from "react";
 
 export const Home = () => {
   const images = [homePageImage1, homePageImage2, homePageImage3];
-  const extendedImages = [...images, ...images, ...images]; // Duplicate for infinite loop
+  const extendedImages = [
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+    ...images,
+  ]; // Duplicate for infinite loop
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
