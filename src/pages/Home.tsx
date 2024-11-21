@@ -89,7 +89,9 @@ export const Home = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
+  const scrollToBottom = () => {
+    window.scrollTo({ top: 1200, behavior: "smooth" });
+  };
   return (
     <Layout>
       {/* Hero Section */}
@@ -104,7 +106,10 @@ export const Home = () => {
             </p>
           </div>
           <div className="mt-6">
-            <PrimaryButton className="!px-32 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-lg transform transition-all duration-300 ease-in-out hover: hover:scale-105">
+            <PrimaryButton
+              className="!px-32 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-lg transform transition-all duration-300 ease-in-out hover: hover:scale-105"
+              onClick={() => scrollToBottom()} // Call the scrollToBottom function when clicked
+            >
               Start Now
             </PrimaryButton>
           </div>
@@ -144,7 +149,7 @@ export const Home = () => {
           <img
             src={whatWeOfferWhite}
             alt="What We Offer - White"
-            className="w-[100%] max-w-[800px] mx-auto mt-[-285px] relative z-10"
+            className="w-[100%] max-w-[800px] mx-auto mt-[-288px] relative z-10"
           />
         </div>
 
@@ -206,7 +211,7 @@ export const Home = () => {
               href="https://www.whatsapp.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-3xl hover:text-green-500 transition duration-300"
+              className="text-3xl hover:text-green transition duration-300"
             >
               <i className="fab fa-whatsapp"></i> {/* WhatsApp Icon */}
             </a>
@@ -226,7 +231,7 @@ export const Home = () => {
               href="https://www.linkedin.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-3xl hover:text-blue-700 transition duration-300"
+              className="text-3xl hover:text-blue-500 transition duration-300"
             >
               <i className="fab fa-linkedin"></i> {/* LinkedIn Icon */}
             </a>
@@ -236,7 +241,7 @@ export const Home = () => {
               href="https://www.youtube.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-3xl hover:text-red-600 transition duration-300"
+              className="text-3xl hover:text-rose-600 transition duration-300"
             >
               <i className="fab fa-youtube"></i> {/* YouTube Icon */}
             </a>
@@ -253,7 +258,7 @@ export const Home = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="flex flex-col items-center justify-center space-y-2">
+          <div className="flex flex-col items-center justify-center ">
             <span className="text-4xl font-bold">^</span> {/* Upwards arrow */}
             <span className="text-sm uppercase tracking-wide">Back to top</span>
             {/* Text below the arrow */}
