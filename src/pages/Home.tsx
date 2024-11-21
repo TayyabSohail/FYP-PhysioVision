@@ -43,7 +43,7 @@ export const Home = () => {
     <Layout>
       <div className="relative w-full overflow-hidden mt-28 mx-auto">
         {/* Fixed text and button container */}
-        <div className="fixed inset-0 flex flex-col justify-center items-center z-50">
+        <div className="fixed inset-0 flex flex-col justify-center items-center z-50 translate-y-16">
           {/* Larger Transparent Card */}
           <div className="bg-white bg-opacity-20 text-black text-center rounded-lg p-8 shadow-lg max-w-4xl mb-6">
             <p className="text-xl font-extrabold leading-relaxed">
