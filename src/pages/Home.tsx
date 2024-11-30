@@ -93,8 +93,8 @@ export const Home = () => {
     window.scrollTo({ top: 1200, behavior: "smooth" });
   };
   return (
-    <Layout>
-      {/* Hero Section */}
+<Layout className="overflow-x-hidden">
+{/* Hero Section */}
       <div className="relative w-full mt-48 mx-auto">
         {/* Fixed text and button container */}
         <div className="absolute inset-x-0 top-[20vh] flex flex-col justify-center items-center z-10">

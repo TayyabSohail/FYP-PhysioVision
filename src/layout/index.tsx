@@ -4,6 +4,7 @@ import { Header } from "../components/Header";
 
 interface LayoutProps {
   children?: React.ReactNode;
+  className?: string;
 }
 
 export const Layout = ({ children }: LayoutProps) => {
