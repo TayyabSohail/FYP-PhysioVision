@@ -16,7 +16,7 @@ export const Header = () => {
           className="shadow-lg bg-black cursor-pointer hover:opacity-80 transition-opacity duration-300"
         />
         <div className="flex flex-col items-start w-28">
-          <p className="text-white text-sm font-bold">Tayyab Sohail</p>
+          <p className="text-white text-xs font-bold">Tayyab Sohail</p>
           <p className="text-white text-xs font-semibold">User</p>
         </div>
       </div>
